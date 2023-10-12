@@ -11,9 +11,12 @@ i{
     font-size: 22px;
     cursor: pointer;
     transform: translate(-20%, -20%);
-   
 }
 
+#top-bar{
+    position: sticky;
+    top: 0%;
+}
 #top-left{
     padding-left: 100px;
     padding-top: 50px;
@@ -27,10 +30,14 @@ i{
 #top{
     display: flex;
     flex-direction: row;
+    position: fixed;
+    top: 0;
+    
 }
 
 #name{
     text-decoration: none;
+    color: rgb(17,16,16);
     font-family: 'Roboto Mono', monospace;
     width: auto;
 }
@@ -38,11 +45,30 @@ i{
 #about{
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
+    color: rgb(17,16,16);
 }
 
 #archive{
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
+    color: rgb(17,16,16);
+}
+
+#archive::after{
+    content:"";
+    position:absolute;
+    bottom: 1px;
+    height: 1px;
+    width: 83px;
+    left:1148px;
+    background-color: rgb(17,16,16);
+    transition: 0.1s;
+    transition-timing-function: ease-in;
+    transform: scaleX(0);
+}
+
+#archive:hover::after{
+    transform: scaleX(1);
 }
 
 #link1{
@@ -62,7 +88,7 @@ i{
 
 #mid-left{
     margin-left: 390px;
-    margin-top: -50px;
+    margin-top: 15px;
     
 }
 
@@ -76,21 +102,31 @@ i{
     margin-left: 10px;
 }
 
-#short-intro{
-    position: absolute;
-    left: 850px;
-    top: 300px;
+#mid-right{
+    position: relative;
+    left: -40px;
+    top: 60px;
 }
 
+.multiText{
+    color: rgb(133, 133, 133);
+}
 
+#linkedin-btn{
+    color: rgb(17,16,16);
+}
 
+#links{
+    display: flex;
+    padding-top: 30px;
+}
 
+#github-btn{
+    padding-left: 20px;
+    color: rgb(17,16,16);
+}
 
-
-
-
-
-
-
-
-
+#instagram-btn{
+    padding-left: 20px;
+    color: rgb(17,16,16);
+}
